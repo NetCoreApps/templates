@@ -1,0 +1,20 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "ServiceStack.Core": "1.0.*",
+    "ServiceStack.Interfaces.Core": "1.0.*",
+    "ServiceStack.Text.Core": "1.0.*",
+    "ServiceStack.Client.Core": "1.0.*",
+    "ServiceStack.Common.Core": "1.0.*",
+    "ServiceStack.OrmLite.Core": "1.0.*",
+    "SelfHostCore.ServiceModel": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}

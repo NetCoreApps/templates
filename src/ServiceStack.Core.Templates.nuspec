@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ServiceStack.Core.Templates</id>
+    <version>1.0.0</version>
+    <authors>ServiceStack</authors>
+    <description>ServiceStack templates for .NET Core</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/ServiceStack/templates</projectUrl>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <!-- dependencies>
+      <dependency id="Microsoft.TemplateEngine.Orchestrator.RunnableProjects" version="1.0.0-beta1-*" />
+    </dependencies -->
+  </metadata>
+</package>
