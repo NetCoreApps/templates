@@ -5,9 +5,9 @@ using Microsoft.Extensions.Logging;
 
 using Funq;
 using ServiceStack;
-using $saferootprojectname$.ServiceInterface;
+using SelfHostCore.ServiceInterface;
 
-namespace $saferootprojectname$
+namespace SelfHostCore
 {
     public class Startup
     {
@@ -37,7 +37,7 @@ namespace $saferootprojectname$
         /// Base constructor requires a Name and Assembly where web service implementation is located
         /// </summary>
         public AppHost()
-            : base("SelfHost1", typeof(MyServices).Assembly) { }
+            : base("SelfHost1", typeof(MyServices).GetAssembly()) { }
 
         /// <summary>
         /// Application specific configuration

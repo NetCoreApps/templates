@@ -19,8 +19,8 @@
     "ServiceStack.OrmLite.Sqlite.Core": "1.0.*",
     "ServiceStack.Server.Core": "1.0.*",
     "ServiceStack.Admin.Core": "1.0.*",
-    "$saferootprojectname$.ServiceInterface": "1.0.0-*",
-    "$saferootprojectname$.ServiceModel": "1.0.0-*"
+    "SelfHostCore.ServiceInterface": "1.0.0-*",
+    "SelfHostCore.ServiceModel": "1.0.0-*"
   },
 
   "tools": {

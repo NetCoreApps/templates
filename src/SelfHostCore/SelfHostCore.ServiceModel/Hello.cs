@@ -1,6 +1,6 @@
 ﻿using ServiceStack;
 
-namespace $saferootprojectname$.ServiceModel
+namespace SelfHostCore.ServiceModel
 {
     [Route("/hello/{Name}")]
     public class Hello : IReturn<HelloResponse>

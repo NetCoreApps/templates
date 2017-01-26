@@ -9,7 +9,7 @@
     "ServiceStack.Client.Core": "1.0.*",
     "ServiceStack.Common.Core": "1.0.*",
     "ServiceStack.OrmLite.Core": "1.0.*",
-    "$saferootprojectname$.ServiceModel": "1.0.0-*"
+    "SelfHostCore.ServiceModel": "1.0.0-*"
   },
 
   "frameworks": {

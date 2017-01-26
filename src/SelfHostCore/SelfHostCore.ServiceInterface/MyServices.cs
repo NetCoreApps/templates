@@ -1,7 +1,7 @@
-﻿using $saferootprojectname$.ServiceModel;
+﻿using SelfHostCore.ServiceModel;
 using ServiceStack;
 
-namespace $saferootprojectname$.ServiceInterface
+namespace SelfHostCore.ServiceInterface
 {
     public class MyServices : Service
     {

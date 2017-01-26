@@ -1,10 +1,10 @@
-﻿using $saferootprojectname$.ServiceInterface;
-using $saferootprojectname$.ServiceModel;
+﻿using SelfHostCore.ServiceInterface;
+using SelfHostCore.ServiceModel;
 using NUnit.Framework;
 using ServiceStack;
 using ServiceStack.Testing;
 
-namespace $saferootprojectname$.Tests
+namespace SelfHostCore.Tests
 {
     public class UnitTests
     {
