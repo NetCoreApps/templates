@@ -1,2 +1,2 @@
 cd build
-nuget.exe pack ..\src\ServiceStack.Core.Templates.nuspec -outputdirectory ..\
+nuget.exe pack ..\src\Templates.nuspec -outputdirectory ..\

@@ -2,10 +2,12 @@
   "author": "ServiceStack",
   "classifications": [ "ServiceStack" ], // Tags used to search for the template.
   "name": "ServiceStack SelfHost Core",
+  "groupIdentity": "ServiceStack.Core",
   "identity": "ServiceStack.SelfHostCore.CSharp",   // A unique ID for the project template.
   "shortName": "ssselfhost",                 // You can create the project using this short name instead of the one above.
   "tags": {
-    "language": "C#"                      // Specify that this template is in C#.
+    "language": "C#",                      // Specify that this template is in C#.
+    "type": "project"
   },
   "sourceName": "SelfHostCore",            // Name of the csproj file and namespace that will be replaced.
   "guids": [                              // Guids used in the project that will be replaced by new ones.
@@ -14,4 +16,5 @@
 	"03C04BB2-7DC6-43F3-B3E1-D8040186B3AD",
 	"5A440471-F8C1-4F6D-800D-D5BE73C102A5"
   ],
+  "primaryOutputs": [ { "path": "SelfHostCore.sln" } ]
 }
