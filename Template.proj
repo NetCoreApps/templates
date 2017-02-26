@@ -9,6 +9,6 @@
   </ItemGroup>
 
   <Target Name="Build">
-    <Exec Command="nuget.exe pack &quot;..\src\Templates.nuspec&quot; -properties &quot;version=1.0&quot; -NoDefaultExcludes" WorkingDirectory=".\build" />
+    <Exec Command="nuget.exe pack &quot;..\src\Templates.nuspec&quot; -properties &quot;version=1.0&quot; -NoDefaultExcludes -o ..\" WorkingDirectory=".\build" />
   </Target>
 </Project>
