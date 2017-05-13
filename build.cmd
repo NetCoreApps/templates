@@ -1,1 +1,1 @@
-dotnet build Template.proj
+dotnet build -v detailed Template.proj /p:NuGetOutput=".\"
