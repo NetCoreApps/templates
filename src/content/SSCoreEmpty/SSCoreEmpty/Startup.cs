@@ -37,7 +37,7 @@ namespace SSCoreEmpty
         /// Base constructor requires a Name and Assembly where web service implementation is located
         /// </summary>
         public AppHost()
-            : base("WebApplication6", typeof(MyServices).GetAssembly()) { }
+            : base("SSCoreEmpty", typeof(MyServices).GetAssembly()) { }
 
         /// <summary>
         /// Application specific configuration
