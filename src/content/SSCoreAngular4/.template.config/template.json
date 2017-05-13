@@ -3,7 +3,7 @@
   "classifications": [ "ServiceStack" ], // Tags used to search for the template.
   "name": "ServiceStack Core Angular 4",
   "identity": "ServiceStack.CoreAngular4.CSharp",   // A unique ID for the project template.
-  "shortName": "ssangular4",                 // You can create the project using this short name instead of the one above.
+  "shortName": "ss-angular4",                 // You can create the project using this short name instead of the one above.
   "tags": {
     "language": "C#",                      // Specify that this template is in C#.
     "type": "project"

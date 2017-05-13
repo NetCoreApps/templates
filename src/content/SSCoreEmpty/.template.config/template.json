@@ -3,8 +3,7 @@
   "classifications": [ "ServiceStack" ], // Tags used to search for the template.
   "name": "ServiceStack Core Empty",
   "identity": "ServiceStack.CoreEmpty.CSharp",   // A unique ID for the project template.
-  "groupIdentity": "ServiceStack.Core.Templates",
-  "shortName": "ssempty",                 // You can create the project using this short name instead of the one above.
+  "shortName": "ss-empty",                 // You can create the project using this short name instead of the one above.
   "tags": {
     "language": "C#",                      // Specify that this template is in C#.
     "type": "project"
