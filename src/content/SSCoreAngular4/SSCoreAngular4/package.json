@@ -1,5 +1,5 @@
 {
-  "name": "Angular4App1",
+  "name": "SSCoreAngular4",
   "version": "0.0.1",
   "scripts": {
     "postinstall": "gulp www-postinstall",
