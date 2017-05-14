@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Funq;
 using ServiceStack;
-using SSCoreEmpty.ServiceInterface;
 
 namespace SSCoreEmpty
 {
@@ -28,26 +26,12 @@ namespace SSCoreEmpty
             }
 
             app.UseServiceStack(new AppHost());
-        }
-    }
-
-    public class AppHost : AppHostBase
-    {
-        /// <summary>
-        /// Base constructor requires a Name and Assembly where web service implementation is located
-        /// </summary>
-        public AppHost()
-            : base("SSCoreEmpty", typeof(MyServices).GetAssembly()) { }
-
-        /// <summary>
-        /// Application specific configuration
-        /// This method should initialize any IoC resources utilized by your web service classes.
-        /// </summary>
-        public override void Configure(Container container)
-        {
-            //Config examples
-            //this.Plugins.Add(new PostmanFeature());
-            //this.Plugins.Add(new CorsFeature());
+            
+            app.Run(context =>
+            {
+                context.Response.Redirect("/metadata");
+                return Task.FromResult(0);
+            });
         }
     }
 }
