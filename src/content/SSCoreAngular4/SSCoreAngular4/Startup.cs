@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Funq;
 using ServiceStack;
 using SSCoreAngular4.ServiceInterface;
+using System.Threading.Tasks;
 
 namespace SSCoreAngular4
 {

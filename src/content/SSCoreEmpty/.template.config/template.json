@@ -4,6 +4,7 @@
   "name": "ServiceStack Core Empty",
   "identity": "ServiceStack.CoreEmpty.CSharp",   // A unique ID for the project template.
   "shortName": "ss-empty",                 // You can create the project using this short name instead of the one above.
+  "groupIdentity": "ServiceStack.CoreEmpty",
   "tags": {
     "language": "C#",                      // Specify that this template is in C#.
     "type": "project"

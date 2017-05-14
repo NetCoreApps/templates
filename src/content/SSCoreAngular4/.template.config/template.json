@@ -4,6 +4,7 @@
   "name": "ServiceStack Core Angular 4",
   "identity": "ServiceStack.CoreAngular4.CSharp",   // A unique ID for the project template.
   "shortName": "ss-angular4",                 // You can create the project using this short name instead of the one above.
+  "groupIdentity": "ServiceStack.CoreAngular4",
   "tags": {
     "language": "C#",                      // Specify that this template is in C#.
     "type": "project"
