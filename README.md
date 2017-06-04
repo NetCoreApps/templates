@@ -38,5 +38,10 @@ Opening the created `MyApp.sln` file with VS2017 and running with the default II
 
 ![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/servicestackvs/dotnet_new_example_running.png)
 
+### ServiceStack with MVC
+Also included in the templates is an MVC .NET Core 1.1 application ready to run!
+
+![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/servicestackvs/dotnet_new_mvc_example_running.png)
+
 ### Running a `ss-selfhost`
 If you going to create a new `SelfHost` using the `ss-selfhost` template and run it with Visual Studio 2017, remember to switch from the default `IIS Express` in the run drop-down to `MyApp`. The `IIS Express` run won't work as the SelfHost template don't include the `.UseIISIntegration()` in the StartUp process.
