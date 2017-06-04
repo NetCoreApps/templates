@@ -22,7 +22,7 @@ dotnet new -i /tmp/templates/src/content
 
 To confirm the templates are installed correctly, type `dotnet new` into a console and you should see the 3 ServiceStack Core templates listed. 
 
-![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/servicestackvs/dotnet_new_example.png)
+![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/servicestackvs/dotnet_new_preview.png)
 
 
 ## Create a new project
