@@ -20,7 +20,7 @@ git clone https://github.com/NetCoreApps/templates.git /tmp
 dotnet new -i /tmp/templates/src/content
 ```
 
-To confirm the templates are installed correctly, type `dotnet new` into a console and you should see the two ServiceStack Core templates listed. 
+To confirm the templates are installed correctly, type `dotnet new` into a console and you should see the 3 ServiceStack Core templates listed. 
 
 ![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/servicestackvs/dotnet_new_example.png)
 
