@@ -29,7 +29,7 @@ To confirm the templates are installed correctly, type `dotnet new` into a conso
 If you want to use the `ss-empty` template now installed, you can use the following command to create a new project with the name `MyApp` in it's own directory.
 
 ```
-dotnet new -i ss-empty -o MyApp -n MyApp
+dotnet new ss-empty -o MyApp -n MyApp
 ```
 
 The `-o` argument controls the output directory name and `-n` controls the name of the template. If neither are provided a default `WebApplication1` project will be created within the current directory of the cli.
