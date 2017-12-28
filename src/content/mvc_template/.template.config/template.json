@@ -1,0 +1,1 @@
+{"author":"ServiceStack","classifications":["ServiceStack"],"name":"Mvc","identity":"ServiceStack.Templates.mvc","shortName":"ss-mvc","groupIdentity":"ServiceStack.mvc","tags":{"language":"C#","type":"project"},"sourceName":"MyApp","primaryOutputs":[{"path":"MyApp.sln"}],"defaultName":"WebApplication1"}

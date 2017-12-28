@@ -1,0 +1,37 @@
+{{ it.order | assignTo: o }}
+
+<table class="table table-bordered auto-width">
+    <tr>
+        <th>Id</th>
+        <td>{{ o.Id }}</td>
+    </tr>
+    <tr>
+        <th>Date</th>
+        <td>{{ o.OrderDate | dateFormat }}</td>
+    </tr>
+    <tr>
+        <th>Customer Id</th>
+        <td><a href="customer?id={{ o.CustomerId }}">{{ o.CustomerId }}</a></td>
+    </tr>
+    <tr>
+        <th>Employee</th>
+        <td><a href="employee?id={{ o.EmployeeId }}">{{ o.Employee }}</a></td>
+    </tr>
+    <tr>
+        <th>Shipped by</th>
+        <td><a href="shippers">{{ o.ShipVia }}</a></td>
+    </tr>
+    <tr>
+        <th>Shipping Cost</th>
+        <td>{{ o.Freight | currency }}</td>
+    </tr>
+    <tr>
+        <th>Shipped to</th>
+        <td>
+            <p>{{ o.ShipAddress }}</p>
+            <p>{{ o.ShipCity }}, {{ o.ShipPostalCode }}, {{ o.ShipCountry }}</p>
+        </td>
+    </tr>
+</table>
+
+{{ it.orderDetails | htmlDump({ className: "table table-striped", caption: "Line Items" }) }}

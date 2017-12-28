@@ -1,0 +1,15 @@
+{
+  "author": "ServiceStack",
+  "classifications": [ "ServiceStack" ],
+  "name": "$template_friendly$",
+  "identity": "ServiceStack.Templates.$template_name$",
+  "shortName": "ss-$template_name$",
+  "groupIdentity": "ServiceStack.$template_name$",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "MyApp",
+  "primaryOutputs": [ { "path": "MyApp.sln" } ],
+  "defaultName": "WebApplication1"
+}

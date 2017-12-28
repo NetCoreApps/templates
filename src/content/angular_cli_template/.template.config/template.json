@@ -1,0 +1,1 @@
+{"author":"ServiceStack","classifications":["ServiceStack"],"name":"Angular Cli","identity":"ServiceStack.Templates.angular-cli","shortName":"ss-angular-cli","groupIdentity":"ServiceStack.angular-cli","tags":{"language":"C#","type":"project"},"sourceName":"MyApp","primaryOutputs":[{"path":"MyApp.sln"}],"defaultName":"WebApplication1"}

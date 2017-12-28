@@ -1,1 +1,1 @@
-dotnet build -v detailed Template.proj
+dotnet build --no-restore -v detailed Template.proj

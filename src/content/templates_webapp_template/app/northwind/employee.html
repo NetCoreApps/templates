@@ -1,0 +1,22 @@
+<!--
+title: Employee Details
+-->
+
+<a id="back" href="javascript:history.back()">&#8592; Back</a>
+
+{{ id | endIfEmpty | use("select * from Employee where Id = @id") | dbSingle({ id }) | assignTo: employee }}
+
+{{ employee | selectPartial: detail-table }}
+
+{{ employee | endIfExists | useFmt("No Employee has id: {0}", id) }}
+
+{{ id | endIfEmpty | use(
+   "select TerritoryDescription, RegionDescription
+      from EmployeeTerritory et
+           inner join
+           Territory t on et.TerritoryId = t.Id
+           inner join 
+           Region r on t.RegionId = r.Id
+     where et.EmployeeId = @id")
+ | dbSelect({ id }) 
+ | htmlDump({ className: "table table-striped auto-width", caption: "Employee Territories"}) }}

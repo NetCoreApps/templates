@@ -1,0 +1,1 @@
+{"author":"ServiceStack","classifications":["ServiceStack"],"name":"Razor","identity":"ServiceStack.Templates.razor","shortName":"ss-razor","groupIdentity":"ServiceStack.razor","tags":{"language":"C#","type":"project"},"sourceName":"MyApp","primaryOutputs":[{"path":"MyApp.sln"}],"defaultName":"WebApplication1"}

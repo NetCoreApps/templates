@@ -1,0 +1,1 @@
+{"author":"ServiceStack","classifications":["ServiceStack"],"name":"Selfhost","identity":"ServiceStack.Templates.selfhost","shortName":"ss-selfhost","groupIdentity":"ServiceStack.selfhost","tags":{"language":"C#","type":"project"},"sourceName":"MyApp","primaryOutputs":[{"path":"MyApp.sln"}],"defaultName":"WebApplication1"}
