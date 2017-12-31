@@ -5,7 +5,8 @@ import * as path from "path";
 const execSync = require('child_process').execSync;
 
 const headers = {
-    'User-Agent': 'servicestack-cli-1'
+    'User-Agent': 'servicestack-cli',
+    'Authorization': `token ${process.env.GITHUB_OAUTH_TOKEN}`
 };
 
 const replaceAll = function(str,search, replacement) {
@@ -13,37 +14,33 @@ const replaceAll = function(str,search, replacement) {
     return target.split(search).join(replacement);
 };
 
-var templatesRepos = require('./testing.json');
 var templateJsonTemplateStr = JSON.stringify(require('./template.json'));
 var packageScriptsDir = resolvePackageScriptsDir();
 var templateRoot = path.join(packageScriptsDir,'dist');
 if (!fs.existsSync(templateRoot)) {
     fs.mkdirSync(templateRoot);
 }
-// request({url:'./testing.json',headers}, (err,res,json) => {
-//     if (err)
-//         handleError(err);
-//     if (res.statusCode >= 400)
-//         handleError(`Request failed '${url}': ${res.statusCode} ${res.statusMessage}`);
-//
-//     try {
-//         var repos = JSON.parse(json);
-//         repos.forEach((item,index) => {
-//             processServiceStackTemplate(templateRoot,item);
-//         })
-//     } catch (e) {
-//         console.log('json', json);
-//         handleError(e, `ERROR: Could not parse JSON response from: ${url}`);
-//     }
-// });
+execSync(`rm -rf ./*`,{cwd: templateRoot});
 
-// Debugging without hitting GH rate limit
-templatesRepos.forEach(
-    (item,index) => {
-        processServiceStackTemplate(templateRoot,item);
-    });
-var outputDir = path.join(packageScriptsDir,'..','src','content');
-execSync(`mv ./* ${outputDir}`, {cwd: path.join(packageScriptsDir,'dist')});
+request({url:'https://api.github.com/orgs/NetCoreTemplates/repos',headers}, (err,res,json) => {
+    if (err)
+        handleError(err);
+    if (res.statusCode >= 400)
+        handleError(`Request failed '${url}': ${res.statusCode} ${res.statusMessage}`);
+
+    try {
+        var repos = JSON.parse(json);
+        repos.forEach((item,index) => {
+            processServiceStackTemplate(templateRoot,item);
+        });
+        var outputDir = path.join(packageScriptsDir,'..','src','content');
+        execSync(`rm -rf ./*`,{cwd: outputDir});
+        execSync(`mv ./* ${outputDir}`, {cwd: path.join(packageScriptsDir,'dist')});
+    } catch (e) {
+        console.log('json', json);
+        handleError(e, `ERROR: Could not parse JSON response from: ${url}`);
+    }
+});
 
 function processServiceStackTemplate(templateRootDir,repoItem) {
     var safeName = replaceAll(repoItem.name, '-', '_') + '_template';
