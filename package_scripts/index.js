@@ -31,6 +31,9 @@ request({ url: url, headers: headers }, function (err, res, json) {
             processServiceStackTemplate(templateRoot, item);
         });
         var outputDir = path.join(packageScriptsDir, '..', 'src', 'content');
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir);
+        }
         execSync("rm -rf ./*", { cwd: outputDir });
         execSync("mv ./* " + outputDir, { cwd: path.join(packageScriptsDir, 'dist') });
     }
