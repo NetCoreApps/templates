@@ -9,6 +9,6 @@
   </ItemGroup>
 
   <Target Name="Build">
-    <Exec Command="dotnet pack &quot;..\src\Templates.nuspec&quot; -properties &quot;version=1.0&quot; -NoDefaultExcludes -o ..\" WorkingDirectory=".\build" />
+    <Exec Command="dotnet pack &quot;./src/Templates.nuspec&quot; /p:Version=0.1 -NoDefaultExcludes -o" />
   </Target>
 </Project>
