@@ -44,6 +44,7 @@ request({url:url,headers}, (err,res,json) => {
         console.error('Output-raw: ' + json);
         handleError(e, `ERROR: Could not parse JSON response from: ${url}`);
     }
+    process.exit(0);
 });
 
 function processServiceStackTemplate(templateRootDir,repoItem) {
