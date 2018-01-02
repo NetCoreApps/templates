@@ -49,11 +49,16 @@ function processServiceStackTemplate(templateRootDir,repoItem) {
     if (!fs.existsSync(templateDir)) {
         fs.mkdirSync(templateDir);
     }
+    try {
+        execSync(`dotnet-new ${repoItem.name}`, {cwd: templateDir});
+        execSync('mv MyApp TempMyApp', {cwd: templateDir});
+        execSync(`mv TempMyApp/* .`, {cwd: templateDir});
+        execSync('rm -rf ./TempMyApp', {cwd: templateDir});
+    } catch (e) {
+        console.error(e, `ERROR: Could not process template ${repoItem.name}`);
+        return;
+    }
 
-    execSync(`dotnet-new ${repoItem.name}`, {cwd: templateDir});
-    execSync('mv MyApp TempMyApp', {cwd: templateDir});
-    execSync(`mv TempMyApp/* .`, {cwd: templateDir});
-    execSync('rm -rf ./TempMyApp', {cwd: templateDir});
     var friendlyItemName = toTitleCase(replaceAll(repoItem.name, '-', ' '));
     var templateJsonOut = templateJsonTemplateStr;
     templateJsonOut = replaceAll(templateJsonOut, '$template_name$', repoItem.name);
