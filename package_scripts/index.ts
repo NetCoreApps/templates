@@ -46,16 +46,16 @@ request({url:url,headers}, (err,res,json) => {
 function processServiceStackTemplate(templateRootDir,repoItem) {
     var safeName = replaceAll(repoItem.name, '-', '_') + '_template';
     var templateDir = path.join(templateRootDir, safeName);
-    if (!fs.existsSync(templateDir)) {
-        fs.mkdirSync(templateDir);
-    }
     try {
+        if (!fs.existsSync(templateDir)) {
+            fs.mkdirSync(templateDir);
+        }
         execSync(`dotnet-new ${repoItem.name}`, {cwd: templateDir});
         execSync('mv MyApp TempMyApp', {cwd: templateDir});
         execSync(`mv TempMyApp/* .`, {cwd: templateDir});
         execSync('rm -rf ./TempMyApp', {cwd: templateDir});
     } catch (e) {
-        console.error(e, `ERROR: Could not process template ${repoItem.name}`);
+        console.error(`ERROR: Could not process template ${repoItem.name}`);
         return;
     }
 
