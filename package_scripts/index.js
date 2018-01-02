@@ -26,7 +26,7 @@ request({ url: 'https://api.github.com/orgs/NetCoreTemplates/repos', headers: he
     if (res.statusCode >= 400)
         handleError("Request failed '" + url + "': " + res.statusCode + " " + res.statusMessage);
     try {
-        var repos = JSON.parse(json);
+        var repos = json;
         repos.forEach(function (item, index) {
             processServiceStackTemplate(templateRoot, item);
         });
