@@ -1,1 +1,0 @@
-{"author":"ServiceStack","classifications":["ServiceStack"],"name":"Aurelia Spa","identity":"ServiceStack.Templates.aurelia-spa","shortName":"ss-aurelia-spa","groupIdentity":"ServiceStack.aurelia-spa","tags":{"language":"C#","type":"project"},"sourceName":"MyApp","primaryOutputs":[{"path":"MyApp.sln"}],"defaultName":"WebApplication1"}

@@ -1,5 +1,0 @@
-name Rockwind MySql Web App
-contentRoot ~/../rockwind
-webRoot ~/../rockwind
-db mysql
-db.connection Server=localhost;Database=northwind;UID=root;Password=test

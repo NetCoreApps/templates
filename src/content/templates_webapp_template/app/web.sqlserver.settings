@@ -1,5 +1,0 @@
-name Rockwind SQL Server Web App
-contentRoot ~/../rockwind
-webRoot ~/../rockwind
-db sqlserver
-db.connection Server=localhost;Database=northwind;User Id=test;Password=test;MultipleActiveResultSets=True;

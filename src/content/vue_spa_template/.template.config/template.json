@@ -1,1 +1,0 @@
-{"author":"ServiceStack","classifications":["ServiceStack"],"name":"Vue Spa","identity":"ServiceStack.Templates.vue-spa","shortName":"ss-vue-spa","groupIdentity":"ServiceStack.vue-spa","tags":{"language":"C#","type":"project"},"sourceName":"MyApp","primaryOutputs":[{"path":"MyApp.sln"}],"defaultName":"WebApplication1"}
