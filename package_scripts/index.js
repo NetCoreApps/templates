@@ -35,7 +35,7 @@ request({ url: url, headers: headers }, function (err, res, json) {
         execSync("mv ./* " + outputDir, { cwd: path.join(packageScriptsDir, 'dist') });
     }
     catch (e) {
-        console.log('json', json);
+        console.log('Output-raw: ' + json);
         handleError(e, "ERROR: Could not parse JSON response from: " + url);
     }
 });
