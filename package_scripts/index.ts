@@ -31,9 +31,13 @@ request({url:url,headers}, (err,res,json) => {
 
     try {
         var repos = JSON.parse(json);
+        console.info('Processing templates');
         repos.forEach((item,index) => {
+            console.info('Processing ' + item.name + ' started...');
             processServiceStackTemplate(templateRoot,item);
+            console.info('Processing ' + item.name + ' completed...');
         });
+        console.info('Processing templates completed. Staging for NuGet...');
         var outputDir = path.join(packageScriptsDir,'..','src','content');
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir);
@@ -44,6 +48,7 @@ request({url:url,headers}, (err,res,json) => {
         console.error('Output-raw: ' + json);
         handleError(e, `ERROR: Could not parse JSON response from: ${url}`);
     }
+    console.info('Completed.');
     process.exit(0);
 });
 
