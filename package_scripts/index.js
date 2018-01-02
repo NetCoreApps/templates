@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var request = require("request");
-var url = require("url");
 var fs = require("fs");
 var path = require("path");
 var execSync = require('child_process').execSync;
@@ -20,7 +19,8 @@ if (!fs.existsSync(templateRoot)) {
     fs.mkdirSync(templateRoot);
 }
 execSync("rm -rf ./*", { cwd: templateRoot });
-request({ url: 'https://api.github.com/orgs/NetCoreTemplates/repos', headers: headers }, function (err, res, json) {
+var url = 'https://api.github.com/orgs/NetCoreTemplates/repos';
+request({ url: url, headers: headers }, function (err, res, json) {
     if (err)
         handleError(err);
     if (res.statusCode >= 400)
@@ -76,6 +76,7 @@ function handleError(e, msg) {
         console.error(msg);
     }
     console.error(e.message || e);
+    console.error(e.stack);
     process.exit(-1);
 }
 function toTitleCase(str) {

@@ -1,5 +1,4 @@
 import * as request from "request";
-import * as url from "url";
 import * as fs from "fs";
 import * as path from "path";
 const execSync = require('child_process').execSync;
@@ -22,7 +21,9 @@ if (!fs.existsSync(templateRoot)) {
 }
 execSync(`rm -rf ./*`,{cwd: templateRoot});
 
-request({url:'https://api.github.com/orgs/NetCoreTemplates/repos',headers}, (err,res,json) => {
+var url = 'https://api.github.com/orgs/NetCoreTemplates/repos';
+
+request({url:url,headers}, (err,res,json) => {
     if (err)
         handleError(err);
     if (res.statusCode >= 400)
@@ -81,6 +82,7 @@ function handleError(e, msg: string = null) {
         console.error(msg);
     }
     console.error(e.message || e);
+    console.error(e.stack);
     process.exit(-1);
 }
 
