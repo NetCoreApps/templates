@@ -38,7 +38,7 @@ request({url:url,headers}, (err,res,json) => {
         execSync(`rm -rf ./*`,{cwd: outputDir});
         execSync(`mv ./* ${outputDir}`, {cwd: path.join(packageScriptsDir,'dist')});
     } catch (e) {
-        console.log('Output-raw: ' + json);
+        console.error('Output-raw: ' + json);
         handleError(e, `ERROR: Could not parse JSON response from: ${url}`);
     }
 });
